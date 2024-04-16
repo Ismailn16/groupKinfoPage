@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='output.css')}}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon_io/favicon.ico') }}" type="image/x-icon">
+</head>
+
+
+<header id="header">
+    <div class="bg-gray-500 flex justify-center items-center">
+        <div class="flex justify-start pb-6 pt-6 pl-64">
+            <img src="https://i.postimg.cc/gjTyVnc0/Group-K-3.png" class="w-1/6 h-1/6">
+            <div class="container mx-auto items-center pt-8">
+                <a href="/home">
+                    <h1 class="text-2xl font-bold pl-4 mb-4 flex justify-start" href="/home">UWE
+                        ITS Help
+                        Services
+                    </h1>
+                </a>
+
+                <nav>
+                    <a class="hover:text-red-700 px-4" href="/issue_form">Issue Form</a>
+                    <a class="hover:text-red-700 px-4" href="/dashboard">Dashboard</a>
+                    <a class="hover:text-red-700 px-4" href="/profile">Profile</a>
+                    <a class="hover:text-red-700 px-4" href="/logout">Log Out</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<body class="bg-gray-100 min-h-screen">
+
+    <div class="container mx-auto">
+        <div class="flex items-center justify-center py-8">
+            <h3>Change your details!</h3>
+        </div>
+        <div class="flex items-center justify-center py-24">
+            <form action="{{ verify }}" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="post">
+                <div>
+                    <label class="flex items-center" for="first_entry">{{ First }}</label>
+                </div>
+                <div>
+                    <input type="text" id="first_entry" name="first_entry" required>
+                </div>
+                <div>
+                    <label for="last_entry">{{ Second }}</label>
+                </div>
+                <div>
+                    <input type="text" id="last_entry" name="last_entry" required>
+                </div>
+                <div>
+                    <button class="flex justify-center">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="flex justify-center items-center">
+        <h3 class="flex items-center justify-center">{{ message }}</h3>
+    </div>
+</body>
+
+<footer class="bg-gray-500">
+    <div class="flex justify-center items-center py-4">
+        <a class="px-2" href="mailto:uweitstestemail@gmail.com">
+            <h1>Contact us!</h1>
+        </a>
+        <a class="px-2" href="#header">
+            <h1>Back to top</h1>
+        </a>
+    </div>
+</footer>
+
+</html>

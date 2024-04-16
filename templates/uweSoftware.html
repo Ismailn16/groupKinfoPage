@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='output.css')}}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon_io/favicon.ico') }}" type="image/x-icon">
+</head>
+
+
+<header id="header">
+    <div class="bg-gray-500 flex justify-center items-center">
+        <div class="flex justify-start pb-6 pt-6 pl-64">
+            <img src="https://i.postimg.cc/gjTyVnc0/Group-K-3.png" class="w-1/6 h-1/6">
+            <div class="container mx-auto items-center pt-8">
+                <a href="/home">
+                    <h1 class="text-2xl font-bold pl-4 mb-4 flex justify-start" href="/home">UWE
+                        ITS Help
+                        Services
+                    </h1>
+                </a>
+
+                <nav>
+                    <a class="hover:text-red-700 px-4" href="/faqPage">FAQs</a>
+                    <a class="hover:text-red-700 px-4" href="/qnaPage">Q&A</a>
+                    <a class="hover:text-red-700 px-4" href="{{ firstTagRoute }}">{{ firstTag }}</a>
+                    <a class="hover:text-red-700 px-4" href='{{ secondTagRoute }}'>{{ secondTag }}</a>
+                    <a class="hover:text-red-700 px-4" href='{{ thirdTagRoute }}'>{{ thirdTag }}</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body class="bg-gray-100">
+    <div class="pt-2">
+        <h1 class="flex justify-center">Frequently Asked Questions and Solutions</h1>
+    </div>
+    <div class="px-8 pt-6 pb-8 ml-auto mr-auto" id="blackboard">
+        <h2 class="flex justify-center text-2xl pt-2">UWE Software
+        </h2>
+        <div>
+            <h3 class="flex justify-center font-bold underline py-2">How to access AppsAnywhere</h3>
+            <div class="mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8">
+                <ol class="list-decimal pl-4">
+                    <p class="flex justify-center pb-2">On your device on or off campus:</p>
+                    <li class="mb-2">Go to https://appsanywhere.uwe.ac.uk. </li>
+                    <li class="mb-2">Login with your UWE Bristol email address and password. </li>
+                    <li class="mb-2">You will see a pop-up asking "Is AppsAnywhere installed on your device?". If you
+                        haven't yet installed the AppsAnywhere client, click Install now.
+                    </li>
+                    <li class="mb-2">Once the download has finished, open the downloaded file and follow the steps
+                        to install AppsAnywhere client. </li>
+                    <li class="mb-2">Select Done once complete.
+                        Wait for validation to complete. Once complete, you will see all applications available for your
+                        course. </li>
+                    <li class="mb-2">Now you can choose from the list or use the search box to Launch an application.
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="pt-4">
+            <div class="mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8">
+                <ol class="list-decimal pl-4">
+                    <p class="flex justify-center pb-2">From a Windows PC on campus:</p>
+                    <li class="mb-2">Access the app store through a web browser at https://appsanywhere.uwe.ac.uk.
+                        There may also be a shortcut icon on the desktop to open AppsAnywhere. </li>
+                    <li class="mb-2">You will see a pop-up asking "Is AppsAnywhere installed on your device?". Click I
+                        have it already to validate your session. </li>
+                    <li class="mb-2">You will see a menu of applications available for your course.
+                    </li>
+                    <li class="mb-2">Choose an application from the menu, or use the search box.</li>
+                    <li class="mb-2">Select Launch. Cloudpaging Player will then stream and open your application. </li>
+                    <p class="pb-2">Please note: launching some applications may take longer,
+                        especially when launched for the first time. Please launch any apps when you first arrive and
+                        log in, before the lesson begins. </p>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="px-8 pt-6 pb-8 ml-auto mr-auto">
+        <h3 class="flex justify-center font-bold underline py-2">How to access Microsoft 365</h3>
+        <div class="mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8">
+            <ol class="list-decimal pl-4 pr-1">
+                <p class="flex justify-center py-2">UWE Campus</p>
+                <li class="mb-2">Log into MYUWE.
+                </li>
+                <li class="mb-2">Follow the link to Office 365 in the quick links.
+                </li>
+                <li class="mb-2">Select the 'App launcher' icon in the top left hand corner.
+                </li>
+                <li class="mb-2">Select an app from the list.
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="px-8 pt-6 pb-8 ml-auto mr-auto">
+        <div class="mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8">
+            <ol class="list-decimal pl-4 pr-1">
+                <p class="flex justify-center py-2">PC and Mac:</p>
+                <li class="mb-2">Go to https://office365.uwe.ac.uk and log in
+                </li>
+                <li class="mb-2">Click Install apps on the right, then select Microsoft 365 apps from the drop-down menu
+                </li>
+                <li class="mb-2">Follow the on-screen instructions to install the programs
+                </li>
+                <li class="mb-2">Once installed, open any Office program. You will be asked to enter your UWE Bristol
+                    email address and password. This will activate your licence for all Office programs.
+                </li>
+            </ol>
+        </div>
+    </div>
+
+
+</body>
+
+<footer class="bg-gray-500">
+    <div class="flex justify-center items-center py-4">
+        <a class="px-2" href="mailto:uweitstestemail@gmail.com">
+            <h1>Contact us!</h1>
+        </a>
+        <a class="px-2" href="#header">
+            <h1>Back to top</h1>
+        </a>
+    </div>
+</footer>
+
+</html>

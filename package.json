@@ -1,0 +1,22 @@
+{
+  "name": "groupkinfopage",
+  "version": "1.0.0",
+  "description": "Web page to help students with ITS issues, designed to be used in conjunction with GroupKemailSystem.",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ismailn16/groupKinfoPage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ismailn16/groupKinfoPage/issues"
+  },
+  "homepage": "https://github.com/Ismailn16/groupKinfoPage#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

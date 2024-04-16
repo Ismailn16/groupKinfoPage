@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='output.css')}}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon_io/favicon.ico') }}" type="image/x-icon">
+</head>
+
+<header id="header">
+    <div class="bg-gray-500 flex justify-center items-center">
+        <div class="flex justify-start pb-6 pt-6 pl-64">
+            <img src="https://i.postimg.cc/gjTyVnc0/Group-K-3.png" class="w-1/6 h-1/6">
+            <div class="container mx-auto items-center pt-8">
+                <a href="/home">
+                    <h1 class="text-2xl font-bold pl-4 mb-4 flex justify-start" href="/home">UWE
+                        ITS Help
+                        Services
+                    </h1>
+                </a>
+
+                <nav>
+                    <a class="hover:text-red-700 px-4" href="/faqPage">FAQs</a>
+                    <a class="hover:text-red-700 px-4" href="/qnaPage">Q&A</a>
+                    <a class="hover:text-red-700 px-4" href="{{ firstTagRoute }}">{{ firstTag }}</a>
+                    <a class="hover:text-red-700 px-4" href='{{ secondTagRoute }}'>{{ secondTag }}</a>
+                    <a class="hover:text-red-700 px-4" href='{{ thirdTagRoute }}'>{{ thirdTag }}</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+    // JavaScript to toggle dropdown
+    function toggleDropdown() {
+        var topicMenu = document.getElementById("topicMenu");
+        topicMenu.classList.toggle("hidden");
+    }
+
+    // Close dropdown when clicking outside
+    window.onclick = function (event) {
+        var topicMenu = document.getElementById("topicMenu");
+        if (!event.target.matches('.bg-gray-600')) {
+            topicMenu.classList.add('hidden');
+        }
+    }
+</script>
+
+<body>
+    <div class="min-h-screen bg-gray-100">
+        <div class="py-2">
+            <h1 class="flex justify-center">Questions and Answers</h1>
+        </div>
+        <div class="flex justify-center items-center">
+            <div class="pr-2">
+                <div class="mx-2">
+                    <label class="flex justify-center" for="postQuestion">Question?</label>
+                </div>
+                <button id="postQuestion"
+                    class="bg-gray-600 text-white px-4 py-2 mx-4 rounded focus:outline-none focus:bg-gray-500"
+                    onclick="window.location.href = '/postQuestion';">Post a question!</button>
+            </div>
+
+            <div class="ml-2 px-2">
+                <h1 class="flex justify-center">Filter Topics</h1>
+                <!-- Dropdown Button -->
+                <button onclick="toggleDropdown()"
+                    class="bg-gray-600 text-white px-4 py-2 mx-4 rounded focus:outline-none focus:bg-gray-500">
+                    Select a Topic!</button>
+                <!-- Dropdown Content -->
+                <div id="topicMenu" class="hidden absolute bg-white rounded shadow-lg mt-2 w-32">
+                    <a href="/qnaPage?topic=Security"
+                        class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Security</a>
+                    <a href="/qnaPage?topic=Blackboard"
+                        class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Blackboard</a>
+                    <a href="/qnaPage?topic=Finance" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Finance</a>
+                    <a href="/qnaPage?topic=Timetable"
+                        class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Timetable</a></option>
+                    <a href="#/qnaPage?topic=Personal Information"
+                        class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Personal
+                        Information</a>
+                    <a href="/qnaPage?topic=Wifi" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Wifi</a>
+                    <a href="/qnaPage?topic=Attendance"
+                        class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Attendance</a>
+                    <a href="/qnaPage?topic=UWE Software" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">UWE
+                        Software</a>
+                    <a href="/qnaPage?topic=Not Specified"
+                        class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Other</a>
+                </div>
+            </div>
+        </div>
+        <div class="py-2 flex items-center justify-center">
+            <h3>{{ message }}</h3>
+            <h3>{{ empty }}</h3>
+        </div>
+        {% for item in questionsArray %}
+        <div class="px-8 pt-4 pb-4 ml-auto mr-auto">
+            <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 ml-auto mr-auto">
+                <a href="/question/{{ item.questionID }}">
+                    <h3 class="font-bold underline">{{ item.questionDesc }}</h3>
+                </a>
+                <div>
+                    <p>Date and Time Posted: {{ item.questionDT }}</p>
+                    <p>Topic: {{ item.questionTopic }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+<footer class="bg-gray-500">
+    <div class="flex justify-center items-center py-4">
+        <a class="px-2" href="mailto:uweitstestemail@gmail.com">
+            <h1>Contact us!</h1>
+        </a>
+        <a class="px-2" href="#header">
+            <h1>Back to top</h1>
+        </a>
+    </div>
+</footer>
+
+</html>

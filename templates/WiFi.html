@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='output.css')}}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon_io/favicon.ico') }}" type="image/x-icon">
+</head>
+
+
+<header id="header">
+    <div class="bg-gray-500 flex justify-center items-center">
+        <div class="flex justify-start pb-6 pt-6 pl-64">
+            <img src="https://i.postimg.cc/gjTyVnc0/Group-K-3.png" class="w-1/6 h-1/6">
+            <div class="container mx-auto items-center pt-8">
+                <a href="/home">
+                    <h1 class="text-2xl font-bold pl-4 mb-4 flex justify-start" href="/home">UWE
+                        ITS Help
+                        Services
+                    </h1>
+                </a>
+
+                <nav>
+                    <a class="hover:text-red-700 px-4" href="/faqPage">FAQs</a>
+                    <a class="hover:text-red-700 px-4" href="/qnaPage">Q&A</a>
+                    <a class="hover:text-red-700 px-4" href="{{ firstTagRoute }}">{{ firstTag }}</a>
+                    <a class="hover:text-red-700 px-4" href='{{ secondTagRoute }}'>{{ secondTag }}</a>
+                    <a class="hover:text-red-700 px-4" href='{{ thirdTagRoute }}'>{{ thirdTag }}</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body class="bg-gray-100">
+    <div class="py-2">
+        <h1 class="flex justify-center">Frequently Asked Questions and Solutions</h1>
+    </div>
+    <div class="px-8 pt-6 pb-8 ml-auto mr-auto" id="wifi">
+        <h2 class="flex justify-center text-2xl pt-2">WiFi
+        </h2>
+        <div>
+            <h3 class="flex justify-center font-bold underline py-2">How can I connect to UWEs WiFi</h3>
+            <div>
+                <h3 class="flex justify-center py-2">IOS:</h3>
+            </div>
+            <div class="flex justify-center container mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8">
+                <ol class="list-decimal pl-4">
+                    <li class="mb-2">Find the settings app on your iPhone/iPad</li>
+                    <li class="mb-2">Once settings comes up, WiFi will be towards the centre. Press it.</li>
+                    <div class="flex justify-center py-2">
+                        <img src="https://i.postimg.cc/5yVQpRCj/IMG-7658-1.jpg" class="w-1/6 h-1/6">
+                    </div>
+                    <li class="mb-2">Once you have clicked on Wifi, there is a section where you can
+                        browse a list of nearby routers and hubs.</li>
+                    <li class="mb-2">If you are nearby UWE buildings, 'eduroam' should appear in this list and this is
+                        the name of UWEs Wifi, click on this. If you are in open spaces on campus, such as the bus stops
+                        or car parks, you may not be within range.
+                    </li>
+                    <div class="flex justify-center py-2">
+                        <img src="https://i.postimg.cc/h4L2gFMy/IMG-7659.jpg" class="w-1/6 h-1/6">
+                    </div>
+                    <li class="mb-2">Upon selecting eduroam, you will be prompted to enter your UWE username and
+                        password. The username is different to your UWE email, however your password is the same. If you
+                        do not know your username, you can find it in the 'My Info' section of the MyUWE dashboard. If
+                        you do not know how to access 'My Info', Refer to the 'Access Personal Information' section.
+                    </li>
+                    <div class="flex justify-center py-2">
+                        <img src="https://i.postimg.cc/yxhKXfm1/IMG-7660.jpg" class="w-1/6 h-1/6">
+                    </div>
+                    <li class="mb-2">Once you have entered these fields, you should be connected!</li>
+                </ol>
+            </div>
+        </div>
+        <div>
+            <h3 class="flex justify-center font-bold underline py-2">Android:</h3>
+            <div class="flex justify-center container bg-white shadow-md rounded px-8 pt-6 pb-8 mx-4">
+                <ol class="list-decimal pl-4">
+                    <li class="mb-2">Find the settings app on your android device</li>
+                    <li class="mb-2">In the settings app, Wifi will either be in a section called 'Connections' or WiFi
+                        will appear on its own section. If it is the former, click on 'Connections'
+                        and then click on 'Wifi' and for the latter, click on 'WiFi' as usual. </li>
+                    <li class="mb-2">Once you have clicked on Wifi, there is a section where you can
+                        browse a list of nearby routers and hubs.</li>
+                    <li class="mb-2">If you are nearby UWE buildings, 'eduroam' should appear in this list and this is
+                        the name of UWEs Wifi, click on this. If you are in open spaces on campus, such as the bus stops
+                        or car parks, you may not be within range.</li>
+                    <li class="mb-2">Upon selecting eduroam, you will be prompted to enter your UWE username and
+                        password. The username is different to your UWE email, however your password is the same. If you
+                        do not know your username, you can find it in the 'My Info' section of the MyUWE dashboard. If
+                        you do not know how to access 'My Info', Refer to the 'Access Personal Information' section.
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div>
+            <h3 class="flex justify-center font-bold underline py-2">Windows:</h3>
+            <div class="flex justify-center container bg-white shadow-md rounded px-8 pt-6 pb-8 mx-4">
+                <ol class="list-decimal pl-4">
+                    <li class="mb-2">Locate the settings application on your machine.</li>
+                    <li class="mb-2">Settings will open and there will be a 'Network & Internet' option, click this.
+                    </li>
+                    <div class="flex justify-center py-2">
+                        <img src="https://i.postimg.cc/05DzjM58/Windows-Settings.png" class="w-1/2 h-1/2">
+                    </div>
+                    <li class="mb-2">Network & Internet will now load and on the left is a sidebar, click the 'Wifi'
+                        option</li>
+                    <div class="flex justify-center py-2">
+                        <img src="https://i.postimg.cc/4NyjwtKG/Network-Sidebar.png" class="w-1/6 h-1/6">
+                    </div>
+                    <li class="mb-2">Once you have clicked on Wifi, click on 'Show available networks' and on the bottom
+                        right, a pop up should appear where you can
+                        browse a list of nearby routers and hubs.</li>
+                    <li class="mb-2">If you are nearby UWE buildings, 'eduroam' should appear in this list and this is
+                        the name of UWEs Wifi, click on this. If you are in open spaces on campus, such as the bus stops
+                        or car parks, you may not be within range.</li>
+                    <li class="mb-2">Upon selecting eduroam, you will be prompted to enter your UWE username and
+                        password. The username is different to your UWE email, however your password is the same. If you
+                        do not know your username, you can find it in the 'My Info' section of the MyUWE dashboard. If
+                        you do not know how to access 'My Info', Refer to the 'Access Personal Information' section.
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div>
+            <h3 class="flex justify-center font-bold underline py-2">Mac OS:</h3>
+            <div class="flex justify-center container bg-white shadow-md rounded px-8 pt-6 pb-8 mx-4">
+                <ol class="list-decimal pl-4">
+                    <li class="mb-2">At the top of your page, there should be a wifi icon click this and a small
+                        dropdown manu will appear.</li>
+                    <li class="mb-2">In this menu it will have your known networks and another dropdown button that when
+                        clicked, shows nearby networks.
+                    </li>
+                    <li class="mb-2">If you are nearby UWE buildings, 'eduroam' should appear in this list and this is
+                        the name of UWEs Wifi, click on this. If you are in open spaces on campus, such as the bus stops
+                        or car parks, you may not be within range.</li>
+                    <li class="mb-2">Upon selecting eduroam, you will be prompted to enter your UWE username and
+                        password. The username is different to your UWE email, however your password is the same. If you
+                        do not know your username, you can find it in the 'My Info' section of the MyUWE dashboard. If
+                        you do not know how to access 'My Info', Refer to the 'Access Personal Information' section.
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer class="bg-gray-500">
+    <div class="flex justify-center items-center py-4">
+        <a class="px-2" href="mailto:uweitstestemail@gmail.com">
+            <h1>Contact us!</h1>
+        </a>
+        <a class="px-2" href="#header">
+            <h1>Back to top</h1>
+        </a>
+    </div>
+</footer>
+
+</html>

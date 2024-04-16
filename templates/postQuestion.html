@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='output.css')}}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon_io/favicon.ico') }}" type="image/x-icon">
+</head>
+
+<header id="header">
+    <div class="bg-gray-500 flex justify-center items-center">
+        <div class="flex justify-start pb-6 pt-6 pl-64">
+            <img src="https://i.postimg.cc/gjTyVnc0/Group-K-3.png" class="w-1/6 h-1/6">
+            <div class="container mx-auto items-center pt-8">
+                <a href="/home">
+                    <h1 class="text-2xl font-bold pl-4 mb-4 flex justify-start" href="/home">UWE
+                        ITS Help
+                        Services
+                    </h1>
+                </a>
+
+                <nav>
+                    <a class="hover:text-red-700 px-4" href="/faqPage">FAQs</a>
+                    <a class="hover:text-red-700 px-4" href="/qnaPage">Q&A</a>
+                    <a class="hover:text-red-700 px-4" href="{{ firstTagRoute }}">{{ firstTag }}</a>
+                    <a class="hover:text-red-700 px-4" href='{{ secondTagRoute }}'>{{ secondTag }}</a>
+                    <a class="hover:text-red-700 px-4" href='{{ thirdTagRoute }}'>{{ thirdTag }}</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body class="min-h-screen  bg-gray-100">
+    <div>
+        <div class="pb-32">
+            <div class="flex justify-center py-8">
+                <h1 class="flex justify-center">Post a Question!</h1>
+            </div>
+            <div class="flex justify-center py-2">
+                <form method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8" action="/add_question">
+                    <div>
+                        <div class="flex justify-center pb-2">
+                            <label for="question">Question:</label>
+                        </div>
+                        <div>
+                            <input type="text" id="question" placeholder="Please enter your question" name="question"
+                                required>
+                        </div>
+                        <div class="flex justify-center py-2">
+                            <label for="topic">Topic:</label>
+                        </div>
+                        <div>
+                            <select name="topic" id="topic">
+                                <option value="Security">Security</option>
+                                <option value="Blackboard">Blackboard</option>
+                                <option value="Finance">Issues relating to Finance</option>
+                                <option value="Timetable">Timetable Related</option>
+                                <option value="Personal Information">Personal Information</option>
+                                <option value="WiFi">WiFi</option>
+                                <option value="Attendance">Issues relating to Attendance</option>
+                                <option value="UWE Software">Issues relating to UWE Software</option>
+                                <option value="Not Specified">Not Specified</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex justify-center py-2">
+                        <button>Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+</body>
+
+<footer class="bg-gray-500">
+    <div class="flex justify-center items-center py-4">
+        <a class="px-2" href="mailto:uweitstestemail@gmail.com">
+            <h1>Contact us!</h1>
+        </a>
+        <a class="px-2" href="#header">
+            <h1>Back to top</h1>
+        </a>
+    </div>
+</footer>
+
+
+
+
+</html>

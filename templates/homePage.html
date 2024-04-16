@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='output.css')}}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon_io/favicon.ico') }}" type="image/x-icon">
+</head>
+
+<body>
+    <header id="header">
+        <div class="bg-gray-500 flex justify-center items-center">
+            <div class="flex justify-start pb-6 pt-6 pl-64">
+                <img src="https://i.postimg.cc/gjTyVnc0/Group-K-3.png" class="w-1/6 h-1/6">
+                <div class="container mx-auto items-center pt-8">
+                    <a href="/home">
+                        <h1 class="text-2xl font-bold pl-4 mb-4 flex justify-start" href="/home">UWE
+                            ITS Help
+                            Services
+                        </h1>
+                    </a>
+
+                    <nav>
+                        <a class="hover:text-red-700 px-4" href="/faqPage">FAQs</a>
+                        <a class="hover:text-red-700 px-4" href="/qnaPage">Q&A</a>
+                        <a class="hover:text-red-700 px-4" href="{{ firstTagRoute }}">{{ firstTag }}</a>
+                        <a class="hover:text-red-700 px-4" href='{{ secondTagRoute }}'>{{ secondTag }}</a>
+                        <a class="hover:text-red-700 px-4" href='{{ thirdTagRoute }}'>{{ thirdTag }}</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <body class="bg-gray-100 min-h-screen">
+        <div class="flex justify-center py-8">
+            <h1 class="text-xl">Welcome to Group K's ITS info page!</h1>
+        </div>
+
+        <div class="mx-64 px-8 pt-6 pb-4 mb-4 py-2">
+            <h1 class="flex justify-center text-center mx-32 pb-4">At UWE, we understand that navigating IT issues
+                can be
+                challenging.
+                That's why we're here to support
+                you
+                every step of the way. Whether you're facing technical difficulties or simply need guidance, our
+                goal is
+                to provide you with the resources and assistance you need to succeed.
+            </h1>
+        </div>
+
+        <div class="flex items-center mx-4 px-4 pt-6 pb-8 mb-4 py-2">
+            <div class="bg-white shadow-md rounded mx-2">
+                <div class="flex justify-center py-2">
+                    <h1>
+                        Email Support:
+                    </h1>
+                </div>
+                <div>
+                    <h1 class="flex justify-center text-center mx-4 pb-8">
+                        Our email support system is your first point of contact for reporting IT issues. Simply fill out
+                        our
+                        form
+                        detailing your problem, and our team will promptly respond with solutions or relevant
+                        information to
+                        help resolve your issue.
+                    </h1>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded mx-2">
+                <div class="flex justify-center py-2">
+                    <h1>
+                        FAQ Section:
+                    </h1>
+                </div>
+                <div class="mx-4">
+                    <h1 class="flex justify-center text-center pb-8">
+                        Our FAQ section is designed to address common IT questions and concerns. Here, you'll find a
+                        comprehensive list of frequently asked questions along with their solutions. Whether you're
+                        troubleshooting software problems or setting up your device, our FAQ section has you
+                        covered.
+                    </h1>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded mx-2">
+                <div class="flex justify-center py-2">
+                    <h1>
+                        Q&A Forum:
+                    </h1>
+                </div>
+                <h1 class="flex justify-center text-center mx-4 pb-8">
+                    For more specific or complex issues, our Q&A forum allows you to interact with fellow students and
+                    IT experts. Simply sign in to post your question, and our community will provide answers and
+                    insights to help you overcome any challenges you may encounter.
+                </h1>
+            </div>
+        </div>
+        <div class="flex justify-center pb-4">
+            <h1>Visit our email support webpage and UWE's ITS webpage!</h1>
+        </div>
+        <div class="flex justify-center items-center pt-4">
+            <div>
+                <a href="https://groupk.email"><img class="w-1/3 h-1/3"
+                        src="https://i.postimg.cc/02fR1nhY/Group-K-1.png"></a>
+            </div>
+            <div>
+                <a href="https://www.uwe.ac.uk/study/it-services/it-service-desk"><img class=""
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUEAAACdCAMAAAAdWzrjAAAAkFBMVEXtHCT////sAADtEx3tCxfsAAvzeXzxW1/tFyDtFR7tDxrwUlb/+vvsABHwVFjsAAXycHT60dH5wMH2paf3q632oaPvS1DzfoH95ebvRUr72Nn3sLL6zM3tIyr71db0hIfuMjj0i43xY2fuKjHvP0T1kpT4ubv96ur+8fL1mJr83+Dya27xYWX5xcbuLzXuNjx0V1OMAAAT6klEQVR4nO1dbYOyrBI2xEKTtdre7c2ysvf//+8OAwhotVlb+5znHK4P9yqi4SXMDDMDt+NYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFj8i+Eq+EYp0cVmFaIq+Dfu8m/eUwJxXgNxr9qtDkrPDBAKnnjyk9XL8JsKI00GSVXp13T6pU7SvK2+qtBXd/mjm/cU8XV5jUJybqzMc/YDX7yAXD3TbYThoTonwTEMl7+gENUUxkiXnnRxf6qPZ3kVNFRl6i6UqTLyVbuHrvdSO/GgdjRe0x+xR3GaMDv4poVXatdqe+RUBVRnr4497zUaDQbbBoMdg0GDrRBd39aQo4k4qmiI7jP4/SKD9VrjNoNhrdYrMEh3T30n2oNG4Xq3+0THNVCFwY0+kePFbeiinWx+cFBF8d8z6PtMmgSYV4mWByQKGIj462NxTZxzoepiVT1y4CV7EWFXxRvmf9/CoDfQJ3XMr8NnzjGRt3k9Xcv7YwY9ZzRKKT0kS89nIjNNF35/NOKEnUejheOi0SA5UgoSfjSaosvRdVFzPm94WFY/szf+XlwWaXrh7KZpWpHCCgzihT6Ro8OUk/nIBnkiscJ/zCBip2GfHdWyi0+/a7UNYidrxhgaMzkTjfa8pQly0LZW+9rUMtTf8qIWheqxpGEIY4sQPp4m0dsYdA0VIbWNUVKrpWK4QJsFtsj9BxjMQtlCEGwx6vHGEgLN6QM5jMra2gOhzl4ug9aOoegS9QwG4TIjHnpIo6JUrMSg0eN4HUNpMMz5yPZTVdD5Rxis7fvnLvsz9TglZ3boEJzAVdbdEoRWrKYwIsJTr85agtAOrkL1iDI5uMNTOgDGBe8VW1aFQbrWZ9xoxC2Tkw6/D2tpmeCfGKT3mvJbBqfYh57V4JR4MHzXFM2YTDmCdcPAyufA4BAjNGemWYoQdgThHmiSHfu4EX9CIkTA2xh0+/psAB3O65qciK/lxaog9U0GKzfllwyCPIbedhQMQu8bIx/+YefZeL/fb6FvMgYHVI6YcN+9UMFgtBFWBZydEBOblSdPVRh0PCXi2G/B5VmhWxH4MbTPT8PIKTJITLyJQWCgBV/TZQe7CORgkUGHsgt4DuPX+N4dYBBMc28g30lWzxnkAmqUD6y3MWgwxo19rTQ4+JtE6pSZNx/vgwQmSjDqXKBy4N1gEKT3nNkHGLpVxzmfzzALzBlkA3nZm/AXKjDIDUPQ1+69lrzEoPetT1FBaXCAiWPY2KwhH2eQM7FFKOItPQc3GASLZAzfM2jAxcD3GnHckgziQbfLxGAKVzSDTCzKlxs+MSuswmCwLJzC2DAB/dLQNmya93kGeRuyTQyq9YT8GwzKkcIGCLB2WgR9ZoIdJIMwJZi4qK76IHSSbQvMCm7XJtUbXYlB4uvTBDuRnOYpoxAVbGzWCpPBBHkKr7tAygw6eq45dIl/rUmYXAHdBqX+JZc6JyQZJD40HorrorrbrMnawRHeobq8rsSg6YrZROpM2S/s3bSNDUa3yWA73ii8Nne/yaCDBrwZ255HQDWHYBKgfchskV0YcsHSr4Uh13zBdMPnKzskaoD/8jzhd9cjKqp781CYFXQOU5rqLavGoGGqMAnh5V1vKw92lGgXGG/8HXtw9/KIvmaQKYNpmq4Qt9CJ5/FHU49NjAPZ2V1PljoEUahK8xq8KLiwIjZgZHXqXS6gEsGo6FfWI1UZZO1XiAKpNDJVi0lrbWO3gj9ikPtZKo+2G1XLRdzUAuP3Ce9iVQbJSp83kHTMdFCuUUJkaGtmUv0Vg59A1MnnqRVRjUHTlbBGE3Ew95TTJtUWI7cD/sUMBpN2239cTaMqg7qgk7O5IIrXRD9mA06hv2fQD4pXnxngRUTomTFcmUGaqPOtvIXZX8qE6WgXIp84/zWDBI0Oy6lZcO73q7pIf4kKDEKf5jN5iVbeFzWvW61pFlwc/y2DZAqT8sSQXuBXmD3Xl17F41idCIJGeiosRR5rsJ7eKfM24w/5/Jyk+BKzmmKQ2SZYTFkmf8SgZsaYC+bKAiCCS4YPXwJc0yUXQw2sfqh9zzfzejt/YpAbo0fnDMdBaxPX8Z8yqGcbmQ4MKFuZQbSb6jiSAA+PmEybPe5v+mBAMbd8A+4gCPj3iXjUwxcMEkzze3x2+Bm5WOhtuRY3ZhhyWDqBEd/Unc30XgsIa/4vGPSCwzppskkFWYDzZTUCTUIuXSZSLqnHGZwO1g0EvPloNF+3yGsBhgcwHVe9vNt7iS7MxwK+1dlM77XomaKRf8AgEoMiO6C8E8BkSIqVEIz9Ezf49+zncbovvuA7YTquahfx/tQJrwnQPmgBoWBQsTDX5wXfTPSO1KMr/yBYC7yZA2E4hNzpHwkLNQMGpSSKPa7whm1Wu/sJCk1lENYpQig6mLHMfGgbzgXxlcXdJQXTu+6DvX4x9ej8EoUlBvlE/YAg1lubCjkoHkulix/63+aymMAV+Pg7hOhWRWbfiqjATDgc7wv6VRlVxfhcPrjN5AWAzA76IVb33KRTocQgROJ2iFnSjJx1lCpxzSNFccR1cYb8AGKeEC7OIFaXlDNs3gPTaXADqtmmdqmpwV2mSrLzE4ODdzAIsS/uduOhtVGJQU9ZM+CIgxEdDhlYH+xUTER4Ct7u/tuaISvTwtEetKIgzN1CH2fQDcWIBGNg8ohB4wVPH7ERS7FLE1uqhZY509NZg8WbY2kvfJxBHloHzQHGS4U+OMOr1WrqvupteABC93deNlsZvtpCfEnNob2CpV3/q1EMFswGuRi8Q3VqMCiSZmiBQVDFEfa95mbzmhB+CFLsXpom33R2F2KcykXA4zIKU/mNPz+K4Qe6/eOY5zkZDIJLIRyskckgz1IdOZCt9dqPVwBaDq/eNBugYp837R4dkDYFocrW+TiDDspnQ2Hq+gaD5MxLCwwSJzfP2p+bKgdo2TGtwPDUQuU3NSeAhoIZ69JNruk+z6CDGvDD4WYawOgI1cejrUzMSULQGpRZ2hGbFHfh5SBW90EECKX1XbzpbOLdYISu+GNw8+UOvjmxcPXCCD3oie/ewYvC/HpeHCA/vUQRPI4gw6+M0YLNrdjrcK0mrhAPLWSs7qPwMfUiFHkUf8By/yVuerfufI2bXjTyIT38r8GfRZr+EJgNkI8PC/1r/3MMElQ/jSdr/Fdv9QkGXeq9w7ghXhm0ghwkRFjhYf/tFPqqHWZpOX+QUjFdwvrvs8Ib9Xffye+bTy7d7xJ66/qI3tLF5q8rG+blpYZ34Pdj0YzudyHbrcAgWezWO4hm4vl6B+4yPFjvvp6jEHGn1O/d1iLr6wrhpPXTgkcj3/Ld/iLDi2a+XXkU1/i8CJLuubsMQol3lhfSm5aZcC1n29+3/g6DDMPm/e9juAXfHZXVDIY/MIh4dqpYidZBYsZ5u7m0t9/fMuIhm77zZHrCTdxnkM0e7jrTjMjd+EEj1ErlimOsGoPw/mwixxcVZCL0Dw0JPJQrh/wQMjXXejxhVsxPoDx5IKsq4ScGC+tRCzBWIT5YRUkuzT6HuXz5J1RjkDcg9UXwhv2FVXGej5bdTlwHhgg6xJ144LkBJKN35nVxL6aDuNM9INeZzmdsFjp/g6fhRwazu/1Lu1sfhD10eKVicnc1BvmihTn12WMh6RmcXEt6FvZB1sQkkIcL6fiQa14OwjmyHdGz/I3fD+MfGVT+viuo1OTDA1GsGXw03CWqMchDhxvEtMESHM8QqaCY0TjugaNuCkN0tpvAj25ZaTbkvmnuidtCzK52mQ55+RukuMlgJ2bomH6u+05xF/f22TA+P9Jln2IQJOAQfbNOlLGhwnPyuWrwIJ4UQ59kU6bZcOsJecd/G0q7iLsLJ8go/x1MBvuQdY+QEUG+P4yZTcva4pXSaH03KDlffmaQXNWvyiCvxjTyBJi4xEAN4yd1WbtgzDIhszmswDGjltrwtAsYte6lBksUO29KBjAZlOv9kU7l4GJCTVa4KoDpMCkX8gZGyEm/Gl+pow0w6uklWWO+KsLYLYQieu6z+gRFZiS4GoMi2yhk3WjABOIeFtkZYweJTIxsM/U1gxCVaudLspqfZNDMFYSVZl2JuO8zZTY/DcMVwbFRKIhdbnLtkp3qEeeQ7rrfavKSfUP1XPG46NIbS1m63Ry0j6Iig2KZDet1AZOBE/YgHyjdCmQI9cSzM7FoUzC4k2Fu6K1fH2XwUuiDRJ21MKrzhq2I9u23hHW1LMRCIUTglAOkHPly7n4x2SFLkPscg0I8QCItF9xDBIk9HhIAx+qoDjXq3B6k8hFcJxPoredPMmikE0H8V69naslsn2sGUWG5LMcG3WeQ3Kg/TOlTDIoFGmw+IqiMPYi77lCA6XA/RsP9iSmVGBYUwxYU3F/NLaAlohA/HqKPykGdzgUL0jWDyzzXt8zgDUJgCfk9Bgkd36hfO3rPMChyLZhFLG5oYZ6f931scTMng3wdyP9pwlcP4xi4gtzCWncO9s4BR59gsM9HgGfkBILU0gwe8mBdicGr3EL5OPcOg9Gd+HQDP8Gg+Dysgdy7AHHWKJE3DjHO7YkT8nmSvDAqVFR3jZyPMLifzWZj0xxcwztoBlXPKTFohOvCrQ6JntBtBu9Ep2tiMU9lBmlvNuNJKdFGHngjpszC8ToiDh114DBhxbjZDsOO3KPkMMmY4hpF/Pbx3QnDqwyW8c0/nH99ocggUbombLA+rL1TGLW3QxVDFck/KSkkgW3b5oAGA74yg+C2Eq4PLz/wI5SHHlx+yBlyUX6dRyTZiStvf0v4/T6D+6MwgW8weC4wqJM4E66AlRRoQtsNexBxU9LomO0LSA0jMQgWL1dm8L8E9xgMe4G0L8oMZsNhsQ/qZYs7uIWcpa0Yg9P4ak5iuHXaSOTB6oQcNhj/ZxhkmDWvR3FnGYiOZDKoh2XcxEIbqenKFYOGFMyzbIwE4/8tBnmWaIHBcJS7Kk0G3YIq3rY3Sd9TLs1rBpVgVOs9jKywvvtWBn1KK9yE6W8EYkEXj8fjfSEFKSnYg7WR+qWCLo5qZYSnpZQBZQaNVFiV/2VMgua4KoM0xw9v7/fX69ZjCpMk+UW47NoeRC0jBWlFDAaNRUJFa8ZYQ6Y/x4gTVGbQ1xOe1o3v0aNVGdzlSO5TCJ37YboWN81/ISBuzEmokVnd9QwGDQO0wKDRh0wc+fZIJQYN61vH1nReXder6KPWXfmHDbJgJ6uHa8OAwfC9DBrbaEDzjHmx/trFWR3V+tUEaIorBrX38U0M/uDD/McYNNd6ucZOKYZIKXkWaHorFxuCUGUGjczC34xisedR8+vrq9H0HYyx43rIk+YXD8exMqIYDDwU8dwGvhUmO5P54RDQCz7BYKLLLm4VBmHhWvcqDRbG15Um0SNeaRJiru9+gsG5J6Ko02Q+Z7/fiftwh3f57mwOqD5PUioY9FEr7nR2Z8qkcJIc0GHT6U25S6kRd+JR8H4GzbV2aTUGYWsShL/m3xMzE5YN4ytrBqsRe9Oa8Z9hMAqCwBcfQOx9AxscJfwoBrd1xBkkKzkLqmPMRtdJLCK7qAn6/O0MEnOHy5X/mEGstjTCbIra1wP6YjIo15oYbog8QqKLwqoWNWew11gulyNfdmG+iRESyRztIay5kwyCwT4ERmsujK5Q7JZ5QnwZggjdvYvBJgL7CnmFTVYfy8HoFErwVw70tQUxtyoMMCGYGEK2I1LdDV9EJ3qGQY7Y4wxuEGrwV9hz0vgqHMngRSwKG4LDmjFYmyPwgIbcqd2DiN77GPxO1ut1r2Ouq5sVdPFtBnU3q/OdUqi65hAzw2bcJ4t56uuoQW1DUYSMaXF1z8IVg65wWRyAloUvpj6SwdUodcQmcQkwyMaCD/F2upT7bPXfx+ANwGYKjxjUnoWwxT7pWUVAQJOYuyUBmm5kSNlae3MyRMaksndLjuLj8TginEEkYk/LVBzzRae5HETzyTaEfsEZPCFxt5eH7t6oSa4RUucxgw417sgMQsCaMfQsB+tl0bXfVaK6h1VrEuIUGLzkDGpNQvnmtSD8igzmoTum2z7H4AFXYdAr78EgsSruLpoz6N6ewjzl5RcMym3JDAYP0LAWIhSuSwYZUzNf5igYDIptf8VarY8xOC/6Zu5aM+X17wKJUCzLQiHfB628t4DA4YlIE+dgILxoboHBEyw0ny4zzeAJBHQAbSwwGFw42R4IyA8xmDVK/sG7DN5c25gvICoG8viqWry6rr8dPRPtNFc7988Gg3gqQ+1DxSBTdMPjEgyMAoOEL0vd9PjSqE8wOBtIH58Rcb9rURNzDS/HsKHmo8gc5GJdso8GWaF6uLuOuP+UBXyXwQCvQJONcS4H20iuqMz74CRn0D0LsqF5v2DQH43bJUw63fVRp6KTvHzc0Ku+6LhU6Hnzid5WfnM0s7BRupGXwln+n7FAlkhOYniq66wPtzHL22G6rdzluG+mcE7bE4lZuppNYBN9bzNpf7lTgnBzxcOEDXqYtb8pHk2yrP2VtNstr9VuQ+L3lN1HHJfE23Dc8tjJbxZx+egaXsGzq4rdHwsxQtPGoXVY9mkhlcjhMbTFsdU6npGxXDSIkN9k9RvTYtDMVY8uPMNFxbfUrSX5sjo2IeLGaMqsP0gVjCA0R+UTAwz/mVAgQ3lquR38dvmn/kEQN+Az1VuXAm553Kj/3uUUfJfdmOdhxp/YU+H/ACqj5DNbKvw/AB024/0s/rIEvowApJv3xG6+FhYWFhYWFhYWFhYWFhYWFhYWFhYWFv/9+A+Q8HiWbOCrigAAAABJRU5ErkJggg=="></a>
+            </div>
+        </div>
+
+        <div class="mx-64 px-8 pt-6 pb-4 mb-4 py-2">
+            <h1 class="flex justify-center text-center mx-32 pb-4"> Our mission is to empower you with the knowledge and
+                support needed to navigate the world of
+                technology confidently. If you can't find the answers you're looking for, don't hesitate to reach
+                out – we're here to help!
+            </h1>
+        </div>
+
+    </body>
+
+    <footer class="bg-gray-500">
+        <div class="flex justify-center items-center py-4">
+            <a class="px-2" href="mailto:uweitstestemail@gmail.com">
+                <h1>Contact us!</h1>
+            </a>
+            <a class="px-2" href="#header">
+                <h1>Back to top</h1>
+            </a>
+        </div>
+    </footer>
+
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='output.css')}}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon_io/favicon.ico') }}" type="image/x-icon">
+</head>
+
+
+<header id="header">
+    <div class="bg-gray-500 flex justify-center items-center">
+        <div class="flex justify-start pb-6 pt-6 pl-64">
+            <img src="https://i.postimg.cc/gjTyVnc0/Group-K-3.png" class="w-1/6 h-1/6">
+            <div class="container mx-auto items-center pt-8">
+                <a href="/home">
+                    <h1 class="text-2xl font-bold pl-4 mb-4 flex justify-start" href="/home">UWE
+                        ITS Help
+                        Services
+                    </h1>
+                </a>
+
+                <nav>
+                    <a class="hover:text-red-700 px-4" href="/faqPage">FAQs</a>
+                    <a class="hover:text-red-700 px-4" href="/qnaPage">Q&A</a>
+                    <a class="hover:text-red-700 px-4" href="{{ firstTagRoute }}">{{ firstTag }}</a>
+                    <a class="hover:text-red-700 px-4" href='{{ secondTagRoute }}'>{{ secondTag }}</a>
+                    <a class="hover:text-red-700 px-4" href='{{ thirdTagRoute }}'>{{ thirdTag }}</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body class="bg-gray-100">
+    <div class="py-2">
+        <h1 class="flex justify-center">Frequently Asked Questions and Solutions</h1>
+    </div>
+
+    <div class="px-8 pt-6 pb-8 ml-auto mr-auto" id="password_and_security">
+        <h2 class="flex justify-center text-2xl">Password and Security
+        </h2>
+        <h3 class="flex justify-center font-bold underline py-2">Reset my Password</h3>
+        <div class="flex justify-center container mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8">
+            <ol class="list-decimal pl-4">
+                <li class="mb-2">Type 'https://newmy.uwe.ac.uk/' into a search engine of your choice</li>
+                <li class="mb-2">Once the page has loaded up, you should be shown this screen.</li>
+                <div class="flex justify-center py-2">
+                    <img src="https://i.postimg.cc/Vv6nVBPX/myuwe-sso-page.png" class="w-1/3 h-1/3">
+                </div>
+                <li class="mb-2">You should then be taken to another page where you are asked to pick an account. if
+                    you
+                    have previously signed into your MyUWE account on the device you are using, your UWE email
+                    should be
+                    there, if not you will be prompted to enter your UWE email.</li>
+                <div class="flex justify-center py-2">
+                    <img src="https://i.postimg.cc/V6NxLvym/selectaccount.png" class="w-1/5 h-1/5">
+                </div>
+                <li class="mb-2">You will then be asked to enter your password, and below the entry box, there will
+                    be a
+                    hyperlink that you need to click that will say 'Forgotten my password' or 'Can't access my
+                    account'
+                </li>
+                <li class="mb-2">If you clicked 'Can't access my account', you will be directed to a page where you
+                    pick
+                    the type of account you wish to access, in which you will pick 'Work' and then you will be taken
+                    to
+                    a second page where you will be asked to enter your UWE email and to complete a word
+                    verification.
+                    If you clicked 'Forgotten my password', you will automcatically be taken to the second page</li>
+                <div class="flex items-center justify-center py-2 mx-4">
+                    <div>
+                        <img src="https://i.postimg.cc/7YjL2vXg/work.png" class="w-1/3 h-1/3">
+                    </div>
+                    <div>
+                        <img src="https://i.postimg.cc/65YtKk4r/whoareyou.png" class="w-1/3 h-1/3">
+                    </div>
+                </div>
+                <li class="mb-2">After this, you are given three options to verify yourself once again, pick the
+                    one
+                    that is most appropriate for you and follow the steps.</li>
+                <li class="mb-2">Once verified, you will be asked to enter a new password and to repeat that new
+                    password, then submit!</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="px-8 pt-6 pb-8 ml-auto mr-auto">
+        <h3 class="flex justify-center font-bold underline py-2">Change my password</h3>
+        <div class="flex justify-center container mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8">
+            <ol class="list-decimal pl-4">
+                <li class="mb-2">Log into MyUWE via 'https://newmy.uwe.ac.uk/'</li>
+                <li class="mb-2">You should then be taken to your MyUWE Dashboard and in the right corner there should
+                    be a cog. Click it and a small dropdown menu will appear, click on account and password.</li>
+                <div class="flex justify-center py-2">
+                    <img src="https://i.postimg.cc/LsyyvM5s/cog2.png" class="w-1/3 h-1/3">
+                </div>
+                <li class="mb-2">A new page will appear and on there will be your microsoft account dashboard. In the
+                    centre of the page is a area labelled 'Password' and below it is a hyperlink which says 'Change
+                    Password', click this.
+                </li>
+                <div class="flex justify-center py-2">
+                    <img src="https://i.postimg.cc/gkCbq857/hub.png" class="w-1/3 h-1/3">
+                </div>
+                <li class="mb-2">You will then be asked to submit your current password, your new password, and to
+                    repeat your new password. Upon submission, your new password will have been set.</li>
+                <li class="mb-2">In the case that you have forgotten your current password, refer to our 'Reset my
+                    password' section. </li>
+            </ol>
+        </div>
+    </div>
+    <div class="px-8 pt-6 pb-8 ml-auto mr-auto">
+        <h3 class="flex justify-center font-bold underline py-2">Reset MFA Authentication</h3>
+        <div class="flex justify-center container mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8">
+            <ol class="list-decimal pl-4">
+                <p class="pb-2">MFA issues typically happen when you buy a new phone or lose one. In any case, the
+                    following steps
+                    will
+                    help you resolve your issue</p>
+                <li class="mb-2">Log into MyUWE via 'https://newmy.uwe.ac.uk/'</li>
+                <li class="mb-2">You should then be taken to your MyUWE Dashboard and in the right corner there should
+                    be a cog. Click it and a small dropdown menu will appear, click on account and password.</li>
+                <div class="flex justify-center py-2">
+                    <img src="https://i.postimg.cc/LsyyvM5s/cog2.png" class="w-1/3 h-1/3">
+                </div>
+                <li class="mb-2">A new page will appear and on there will be your microsoft account dashboard. Among the
+                    sections in the page, there is one labelled 'Security info' and below it is a hyperlink which says
+                    'Update Info', click this.
+                </li>
+                <div class="flex justify-center py-2">
+                    <img src="https://i.postimg.cc/gkCbq857/hub.png" class="w-1/3 h-1/3">
+                </div>
+                <li class="mb-2">A page with a summary of your security info will appear. In this page, there should be
+                    three sign-in methods, phone number, password and MFA. On the same line as MFA will be a hyperlink
+                    which says 'Delete', click this</li>
+                <div class="flex justify-center py-2">
+                    <img src="https://i.postimg.cc/SKxv8GqC/sec.png" class="w-1/3 h-1/3">
+                </div>
+                <li class="mb-2">Doing this should delete your previous MFA method and once returned to the security
+                    info page, you will see that you can now add a new MFA Method.</li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+<footer class="bg-gray-500">
+    <div class="flex justify-center items-center py-4">
+        <a class="px-2" href="mailto:uweitstestemail@gmail.com">
+            <h1>Contact us!</h1>
+        </a>
+        <a class="px-2" href="#header">
+            <h1>Back to top</h1>
+        </a>
+    </div>
+</footer>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='output.css')}}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon_io/favicon.ico') }}" type="image/x-icon">
+</head>
+
+
+<header id="header">
+    <div class="bg-gray-500 flex justify-center items-center">
+        <div class="flex justify-start pb-6 pt-6 pl-64">
+            <img src="https://i.postimg.cc/gjTyVnc0/Group-K-3.png" class="w-1/6 h-1/6">
+            <div class="container mx-auto items-center pt-8">
+                <a href="/home">
+                    <h1 class="text-2xl font-bold pl-4 mb-4 flex justify-start" href="/home">UWE
+                        ITS Help
+                        Services
+                    </h1>
+                </a>
+
+                <nav>
+                    <a class="hover:text-red-700 px-4" href="/faqPage">FAQs</a>
+                    <a class="hover:text-red-700 px-4" href="/qnaPage">Q&A</a>
+                    <a class="hover:text-red-700 px-4" href="{{ firstTagRoute }}">{{ firstTag }}</a>
+                    <a class="hover:text-red-700 px-4" href='{{ secondTagRoute }}'>{{ secondTag }}</a>
+                    <a class="hover:text-red-700 px-4" href='{{ thirdTagRoute }}'>{{ thirdTag }}</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body class="bg-gray-100">
+    <div class="pt-2">
+        <h1 class="flex justify-center">Frequently Asked Questions and Solutions</h1>
+    </div>
+
+    <div class="px-8 pt-6 pb-8 ml-auto mr-auto" id="password_and_security">
+        <h2 class="flex justify-center text-2xl">Miscellaneous
+        </h2>
+        <h3 class="flex justify-center font-bold underline py-2">How to create a teams meeting</h3>
+        <div class="flex justify-center container mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8">
+            <ol class="list-decimal pl-4">
+                <li class="mb-2">Download Microsoft Teams or go on the web version</li>
+                <li class="mb-2">If you are on a UWE account your access may be limited, but in normal instances, click
+                    calendar once it has loaded up.
+                </li>
+                <li class="mb-2">The calendar page should show your schedule for the next week and in the top right
+                    corner is 'New Meeting', click this.
+                </li>
+                <li class="mb-2">You will then be prompted to enter the details regarding your meeting, e.g. Meeting
+                    name, recipients, time and date, etc. Click save in the top right corner and your meeting is set and
+                    invitations will have been sent out.
+                </li>
+                <div class="flex justify-center py-2">
+                    <img src="https://i.postimg.cc/yN05pgM8/Teams.png" class="w-1/2 h-1/2">
+                </div>
+            </ol>
+        </div>
+    </div>
+    <div class="px-8 pt-6 pb-8 ml-auto mr-auto" id="password_and_security">
+        <h2 class="flex justify-center text-2xl">Miscellaneous
+        </h2>
+        <h3 class="flex justify-center font-bold underline py-2">How to access Library Search</h3>
+        <div class="flex justify-center container mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8">
+            <ol class="list-decimal pl-4">
+                <li class="mb-2">Log into MyUWE via 'https://newmy.uwe.ac.uk/'</li>
+                <li class="mb-2">You should then be taken to your MyUWE Dashboard and at the top is a link to
+                    'Library Search', click this.</li>
+                <div class="flex justify-center py-2">
+                    <img src="https://i.postimg.cc/fThtb2j2/bb.png" class="w-1/2">
+                </div>
+                <li class="mb-2">You should then be taken to Library Search where you can search for anything, set
+                    filters on your search, explore databases, etc.</li>
+                <div class="flex justify-center py-2">
+                    <img src="https://i.postimg.cc/ryDH7HXH/Library-Search.png" class="w-1/2">
+                </div>
+            </ol>
+        </div>
+    </div>
+
+</body>
+
+<footer class="bg-gray-500">
+    <div class="flex justify-center items-center py-4">
+        <a class="px-2" href="mailto:uweitstestemail@gmail.com">
+            <h1>Contact us!</h1>
+        </a>
+        <a class="px-2" href="#header">
+            <h1>Back to top</h1>
+        </a>
+    </div>
+</footer>
+
+</html>
