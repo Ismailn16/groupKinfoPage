@@ -28,14 +28,14 @@ def home():
         secondTagRoute = '/logout'
         thirdTag = 'Profile'
         thirdTagRoute = '/profile'
-        return render_template('homePage.html', username=username, firstTag=firstTag, firstTagRoute=firstTagRoute, secondTag=secondTag, secondTagRoute=secondTagRoute, thirdTag=thirdTag, thirdTagRoute=thirdTagRoute)
+        return render_template('index.html', username=username, firstTag=firstTag, firstTagRoute=firstTagRoute, secondTag=secondTag, secondTagRoute=secondTagRoute, thirdTag=thirdTag, thirdTagRoute=thirdTagRoute)
     else:
         username = session.get('username')
         firstTag = 'Create Account'
         firstTagRoute = '/create_account_form'
         secondTag = 'Log In'
         secondTagRoute = '/login_function'
-        return render_template('homePage.html', username=username, firstTag=firstTag, firstTagRoute=firstTagRoute, secondTag=secondTag, secondTagRoute=secondTagRoute)
+        return render_template('index.html', username=username, firstTag=firstTag, firstTagRoute=firstTagRoute, secondTag=secondTag, secondTagRoute=secondTagRoute)
 
 
 @app.route('/create_account_form', methods = ['GET', 'POST'] )
@@ -523,4 +523,4 @@ def postQuestion():
         return redirect(url_for('qnaPage'))
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=8080)
